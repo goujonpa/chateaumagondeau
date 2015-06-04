@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from news.models import News, Categorie
 
 
 def home(request):
-    return render(request, 'news/home.html', locals())
+    news = News.objects.all()
+    return render(request, 'news/home.html', {'news': news})

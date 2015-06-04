@@ -1,59 +1,49 @@
-{% load staticfiles %}
-
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="fr" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="fr" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="fr"> <!--<![endif]-->
-
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-
-    <title>{% block title %}Accueil | Chateau Magondeau{% endblock %}</title>
+    <title>Blog Medium Right Sidebar 1 | Unify - Responsive Website Template</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chateau Magondeau - Winery website">
-    <meta name="author" content="Paul GOUJON">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href='{% static 'favicon.ico' %}'>
+    <link rel="shortcut icon" href="favicon.ico">
 
     <!-- Web Fonts -->
     <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href='{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}'>
-    <link rel="stylesheet" href='{% static 'assets/css/style.css' %}'>
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- CSS Header and Footer -->
-    <link rel="stylesheet" href='{% static 'assets/css/headers/header-default.css' %}'>
-    <link rel="stylesheet" href='{% static 'assets/css/footers/footer-v1.css' %}'>
+    <link rel="stylesheet" href="assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href='{% static 'assets/plugins/animate.css' %}'>
-    <link rel="stylesheet" href='{% static 'assets/plugins/line-icons/line-icons.css' %}'>
-    <link rel="stylesheet" href='{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}'>
-
-    <!-- CSS Theme -->
-    <link rel="stylesheet" href='{% static 'assets/css/theme-colors/dark-red.css' %}' id="style_color">
+    <link rel="stylesheet" href="assets/plugins/animate.css">
+    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href='{% static 'assets/css/custom.css' %}'>
-    {% block stylesheets %}{% endblock %}
-
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
 <body>
 
 <div class="wrapper">
-
     <!--=== Header ===-->
     <div class="header">
         <div class="container">
-
             <!-- Logo -->
             <a class="logo" href="index.html">
-                <img src='{% static 'assets/img/logo1-dark-red.png' %}' alt="Logo">
+                <img src="assets/img/logo1-default.png" alt="Logo">
             </a>
             <!-- End Logo -->
 
@@ -86,25 +76,23 @@
                 <span class="fa fa-bars"></span>
             </button>
             <!-- End Toggle -->
-
         </div><!--/end container-->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
             <div class="container">
                 <ul class="nav navbar-nav">
-
                     <!-- Home -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            Actualités
+                            Home
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href='{% url 'news.views.home' %}'>Fil d'actualités</a></li>
+                            <li><a href="index.html">Option 1: Default Page</a></li>
 
                             <!-- One Page -->
                             <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Presse</a>
+                                <a href="javascript:void(0);">Option 2: One Page</a>
                                 <ul class="dropdown-menu">
                                     <li><a target="_blank" href="One-Page/index.html">- One Page Template</a></li>
                                     <li><a target="_blank" href="One-Page/dark-page-example.html">- One Page Dark Theme</a></li>
@@ -114,7 +102,7 @@
 
                             <!-- Shop UI Page -->
                             <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Récompenses</a>
+                                <a href="javascript:void(0);">Option 3: Shop UI</a>
                                 <ul class="dropdown-menu">
                                     <li><a target="_blank" href="Shop-UI/index.html">- Home Page</a></li>
                                     <li><a target="_blank" href="Shop-UI/shop-ui-inner.html">- Product Page</a></li>
@@ -127,7 +115,25 @@
                             </li>
                             <!-- End Shop UI -->
 
-                            <li><a href="page_home8.html">Salons</a></li>
+                            <li><a href="page_home8.html">Option 4: Home Discover</a></li>
+                            <li><a href="page_home9.html">Option 5: Home Creative</a></li>
+                            <li><a href="page_home10.html">Option 6: Home Inspire</a></li>
+                            <li><a href="page_home11.html">Option 7: Home Desire</a></li>
+                            <li><a href="page_jobs.html">Option 8: Home Jobs</a></li>
+                            <li><a href="page_home3.html">Option 9: Amazing Content</a></li>
+                            <li><a href="page_home6.html">Option 10: Home Magazine</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="javascript:void(0);">Option 11: Home Sidebar</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="page_home12.html">- Home Left Sidebar</a></li>
+                                    <li><a href="page_home13.html">- Home Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="page_home1.html">Option 12: Home Basic v1</a></li>
+                            <li><a href="page_home2.html">Option 13: Home Basic v2</a></li>
+                            <li><a href="page_home5.html">Option 14: Home Basic v3</a></li>
+                            <li><a href="page_home4.html">Option 15: Home Basic v4</a></li>
+                            <li><a href="page_home7.html">Option 16: Home Basic v5</a></li>
                         </ul>
                     </li>
                     <!-- End Home -->
@@ -383,7 +389,7 @@
                     <!-- End Pages -->
 
                     <!-- Blog -->
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Blog
                         </a>
@@ -396,10 +402,10 @@
                                     <li><a href="blog_large_full_width1.html">Full Width</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown-submenu">
+                            <li class="dropdown-submenu active">
                                 <a href="javascript:void(0);">Blog Medium Image</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="blog_medium_right_sidebar1.html">Right Sidebar</a></li>
+                                    <li class="active"><a href="blog_medium_right_sidebar1.html">Right Sidebar</a></li>
                                     <li><a href="blog_medium_left_sidebar1.html">Left Sidebar</a></li>
                                     <li><a href="blog_medium_full_width1.html">Full Width</a></li>
                                 </ul>
@@ -660,12 +666,12 @@
                     <!-- End Shortcodes -->
 
                     <!-- Misc Pages -->
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Misc
                         </a>
                         <ul class="dropdown-menu pull-right">
-                            <li class="active"><a href="page_misc_blank.html">Blank page</a></li>
+                            <li><a href="page_misc_blank.html">Blank page</a></li>
                             <li><a href="page_misc_boxed.html">Boxed Page</a></li>
                             <li><a href="page_misc_boxed_img.html">Boxed Image Page</a></li>
                             <li><a href="page_misc_boxed_fixed_header.html">Boxed Fixed Menu</a></li>
@@ -697,11 +703,312 @@
     </div>
     <!--=== End Header ===-->
 
-    {% block slider %}{% endblock %}
+    <!--=== Breadcrumbs v1 ===-->
+    <div class="breadcrumbs-v1">
+        <div class="container">
+            <span>Blog Page</span>
+            <h1>Basic Medium Posts</h1>
+        </div>
+    </div>
+    <!--=== End Breadcrumbs v1 ===-->
 
-    {% block breadcrumbs %}{% endblock %}
+    <!--=== Blog Posts ===-->
+    <div class="container content-md">
+        <div class="row">
+            <!-- Blog All Posts -->
+            <div class="col-md-9">
+                <!-- News v3 -->
+                <div class="row margin-bottom-20">
+                    <div class="col-sm-5 sm-margin-bottom-20">
+                        <img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7 news-v3">
+                        <div class="news-v3-in-sm no-padding">
+                            <ul class="list-inline posted-info">
+                                <li>By Alexander Jenni</li>
+                                <li>In <a href="#">Design</a></li>
+                                <li>Posted January 24, 2015</li>
+                            </ul>
+                            <h2><a href="#">Incredible standard post “IMAGE”</a></h2>
+                            <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin non metus inmi efficitur...</p>
+                            <ul class="post-shares">
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-speech"></i>
+                                        <span>5</span>
+                                    </a>
+                                </li>
+                                <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                                <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--/end row-->
+                <!-- End News v3 -->
 
-    {% block content %}{% endblock %}
+                <div class="clearfix margin-bottom-20"><hr></div>
+
+                <!-- News v3 -->
+                <div class="row margin-bottom-20">
+                    <div class="col-sm-5 sm-margin-bottom-20">
+                        <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="assets/img/main/img19.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/img/main/img3.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/img/main/img24.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 news-v3">
+                        <div class="news-v3-in-sm no-padding">
+                            <ul class="list-inline posted-info">
+                                <li>By Luke Etheridge</li>
+                                <li>In <a href="#">Design</a></li>
+                                <li>Posted January 24, 2015</li>
+                            </ul>
+                            <h2><a href="#">Amazing post “IMAGE-SLIDER”</a></h2>
+                            <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin non metus inmi efficitur...</p>
+                            <ul class="post-shares">
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-speech"></i>
+                                        <span>5</span>
+                                    </a>
+                                </li>
+                                <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                                <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--/end row-->
+                <!-- End News v3 -->
+
+                <div class="clearfix margin-bottom-20"><hr></div>
+
+                <!-- News v3 -->
+                <div class="row margin-bottom-20">
+                    <div class="col-sm-5 sm-margin-bottom-20">
+                        <div class="responsive-video">
+                            <iframe src="//player.vimeo.com/video/93094247?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 news-v3">
+                        <div class="news-v3-in-sm no-padding">
+                            <ul class="list-inline posted-info">
+                                <li>By Alexander Jenni</li>
+                                <li>In <a href="#">Design</a></li>
+                                <li>Posted January 24, 2015</li>
+                            </ul>
+                            <h2><a href="#">Awesome post “VIDEO”</a></h2>
+                            <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin non metus inmi efficitur...</p>
+                            <ul class="post-shares">
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-speech"></i>
+                                        <span>5</span>
+                                    </a>
+                                </li>
+                                <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                                <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--/end row-->
+                <!-- End News v3 -->
+
+                <div class="clearfix margin-bottom-20"><hr></div>
+
+                <!-- News v3 -->
+                <div class="row margin-bottom-20">
+                    <div class="col-sm-5 sm-margin-bottom-20">
+                        <img class="img-responsive" src="assets/img/main/img18.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7 news-v3">
+                        <div class="news-v3-in-sm no-padding">
+                            <ul class="list-inline posted-info">
+                                <li>By Luke Etheridge</li>
+                                <li>In <a href="#">Design</a></li>
+                                <li>Posted January 24, 2015</li>
+                            </ul>
+                            <h2><a href="#">Wonderful post “IMAGE”</a></h2>
+                            <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin non metus inmi efficitur...</p>
+                            <ul class="post-shares">
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-speech"></i>
+                                        <span>5</span>
+                                    </a>
+                                </li>
+                                <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                                <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--/end row-->
+                <!-- End News v3 -->
+
+                <div class="clearfix margin-bottom-20"><hr></div>
+
+                <!-- News v3 -->
+                <div class="row margin-bottom-20">
+                    <div class="col-sm-5 sm-margin-bottom-20">
+                        <img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7 news-v3">
+                        <div class="news-v3-in-sm no-padding">
+                            <ul class="list-inline posted-info">
+                                <li>By Alexander Jenni</li>
+                                <li>In <a href="#">Design</a></li>
+                                <li>Posted January 24, 2015</li>
+                            </ul>
+                            <h2><a href="#">Incredible standard post “IMAGE”</a></h2>
+                            <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin non metus inmi efficitur...</p>
+                            <ul class="post-shares">
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-speech"></i>
+                                        <span>5</span>
+                                    </a>
+                                </li>
+                                <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                                <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--/end row-->
+                <!-- End News v3 -->
+
+                <div class="clearfix margin-bottom-20"><hr></div>
+
+                <!-- Pager v3 -->
+                <ul class="pager pager-v3 pager-sm no-margin-bottom">
+                    <li class="previous"><a href="#">&larr; Older</a></li>
+                    <li class="page-amount">1 of 7</li>
+                    <li class="next"><a href="#">Newer &rarr;</a></li>
+                </ul>
+                <!-- End Pager v3 -->
+            </div>
+            <!-- End Blog All Posts -->
+
+            <!-- Blog Sidebar -->
+            <div class="col-md-3">
+                <div class="headline-v2 bg-color-light"><h2>Trending</h2></div>
+                <!-- Trending -->
+                <ul class="list-unstyled blog-trending margin-bottom-50">
+                    <li>
+                        <h3><a href="#">Proin dapibus ornare magna.</a></h3>
+                        <small>19 Jan, 2015 / <a href="#">Hi-Tech,</a> <a href="#">Technology</a></small>
+                    </li>
+                    <li>
+                        <h3><a href="#">Fusce at diam ante.</a></h3>
+                        <small>17 Jan, 2015 / <a href="#">Artificial Intelligence</a></small>
+                    </li>
+                    <li>
+                        <h3><a href="#">Donec quis consequat magna...</a></h3>
+                        <small>5 Jan, 2015 / <a href="#">Web,</a> <a href="#">Webdesign</a></small>
+                    </li>
+                </ul>
+                <!-- End Trending -->
+
+                <div class="headline-v2 bg-color-light"><h2>Latest Posts</h2></div>
+                <!-- Latest Links -->
+                <ul class="list-unstyled blog-latest-posts margin-bottom-50">
+                    <li>
+                        <h3><a href="#">The point of using Lorem Ipsum</a></h3>
+                        <small>19 Jan, 2015 / <a href="#">Hi-Tech,</a> <a href="#">Technology</a></small>
+                        <p>Phasellus ullamcorper pellentesque ex. Cras venenatis elit orci, vitae dictum elit egestas a. Nunc nec auctor mauris, semper scelerisque nibh.</p>
+                    </li>
+                    <li>
+                        <h3><a href="#">Many desktop publishing packages...</a></h3>
+                        <small>23 Jan, 2015 / <a href="#">Art,</a> <a href="#">Lifestyles</a></small>
+                        <p>Integer vehicula sed justo ac dapibus. In sodales nunc non varius accumsan.</p>
+                    </li>
+                </ul>
+                <!-- End Latest Links -->
+
+                <div class="headline-v2 bg-color-light"><h2>Tags</h2></div>
+                <!-- Tags v2 -->
+                <ul class="list-inline tags-v2 margin-bottom-50">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Economy</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Elections</a></li>
+                    <li><a href="#">Flickr</a></li>
+                    <li><a href="#">Politics</a></li>
+                </ul>
+                <!-- End Tags v2 -->
+
+                <div class="headline-v2 bg-color-light"><h2>Photostream</h2></div>
+                <!-- Photostream -->
+                <ul class="list-inline blog-photostream margin-bottom-50">
+                    <li>
+                        <a href="assets/img/main/img22.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 1">
+                            <span><img class="img-responsive" src="assets/img/main/img22.jpg" alt=""></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/img/main/img23.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 2">
+                            <span><img class="img-responsive" src="assets/img/main/img23.jpg" alt=""></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/img/main/img4.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 3">
+                            <span><img class="img-responsive" src="assets/img/main/img4.jpg" alt=""></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/img/main/img9.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 4">
+                            <span><img class="img-responsive" src="assets/img/main/img9.jpg" alt=""></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/img/main/img25.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 5">
+                            <span><img class="img-responsive" src="assets/img/main/img25.jpg" alt=""></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/img/main/img6.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 6">
+                            <span><img class="img-responsive" src="assets/img/main/img6.jpg" alt=""></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/img/main/img20.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 7">
+                            <span><img class="img-responsive" src="assets/img/main/img20.jpg" alt=""></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/img/main/img3.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 8">
+                            <span><img class="img-responsive" src="assets/img/main/img3.jpg" alt=""></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/img/main/img7.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 9">
+                            <span><img class="img-responsive" src="assets/img/main/img7.jpg" alt=""></span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- End Photostream -->
+            </div>
+            <!-- End Blog Sidebar -->
+        </div>
+    </div>
+    <!--=== End Blog Posts ===-->
 
     <!--=== Footer Version 1 ===-->
     <div class="footer-v1">
@@ -710,7 +1017,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img id="logo-footer" class="footer-logo" src='{% static 'assets/img/logo2-dark-red.png' %}' alt=""></a>
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
                         <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
                         <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>
                     </div><!--/col-md-3-->
@@ -755,11 +1062,11 @@
                     <div class="col-md-3 map-img md-margin-bottom-40">
                         <div class="headline"><h2>Contact Us</h2></div>
                         <address class="md-margin-bottom-40">
-                            378, Rua Dona Maria Carolina<br />
-                            CEP 51020-220 <br />
-                            Boa Viagem <br />
-                            Recife, PE, Brasil <br />
-                            Email: <a href="mailto:info@anybiz.com" class="">contact@chateaumagondeau.com</a>
+                            25, Lorem Lis Street, Orange <br />
+                            California, US <br />
+                            Phone: 800 123 3456 <br />
+                            Fax: 800 123 3456 <br />
+                            Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
                         </address>
                     </div><!--/col-md-3-->
                     <!-- End Address -->
@@ -772,7 +1079,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p>
-                            Paul GOUJON 2015 &copy; All Rights Reserved.
+                            2015 &copy; All Rights Reserved.
                            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
                         </p>
                     </div>
@@ -823,37 +1130,31 @@
         </div><!--/copyright-->
     </div>
     <!--=== End Footer Version 1 ===-->
-
 </div><!--/wrapper-->
 
-<script type="text/javascript">var STATIC_URL={% static '' %};</script>
-
 <!-- JS Global Compulsory -->
-<script type="text/javascript" src='{% static 'assets/plugins/jquery/jquery.min.js' %}'></script>
-<script type="text/javascript" src='{% static 'assets/plugins/jquery/jquery-migrate.min.js' %}'></script>
-<script type="text/javascript" src='{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}'></script>
-
+<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src='{% static 'assets/plugins/back-to-top.js' %}'></script>
-<script type="text/javascript" src='{% static 'assets/plugins/smoothScroll.js' %}'></script>
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src='{% static 'assets/js/custom.js' %}'></script>
+<script type="text/javascript" src="assets/js/custom.js"></script>
 <!-- JS Page Level -->
-<script type="text/javascript" src='{% static 'assets/js/app.js' %}'></script>
-{% block scripts %}{% endblock %}
-
-{% block jquery %}
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/plugins/fancy-box.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
       	App.init();
+        FancyBox.initFancybox();
         });
 </script>
-{% endblock %}
-
 <!--[if lt IE 9]>
-    <script src='{% static 'assets/plugins/respond.js' %}'></script>
-    <script src='{% static 'assets/plugins/html5shiv.js' %}'></script>
-    <script src='{% static 'assets/plugins/placeholder-IE-fixes.js' %}'></script>
+    <script src="assets/plugins/respond.js"></script>
+    <script src="assets/plugins/html5shiv.js"></script>
+    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
 <![endif]-->
 
 </body>
