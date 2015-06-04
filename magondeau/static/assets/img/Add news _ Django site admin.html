@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost:8000/admin/news/news/add/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Add news | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="./Add news _ Django site admin_files/base.css">
+<link rel="stylesheet" type="text/css" href="./Add news _ Django site admin_files/forms.css">
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
+
+<script type="text/javascript">window.__admin_media_prefix__ = "/static/admin/";</script>
+<script type="text/javascript">window.__admin_utc_offset__ = "0";</script>
+
+<script type="text/javascript" src="./Add news _ Django site admin_files/saved_resource"></script>
+<script type="text/javascript" src="./Add news _ Django site admin_files/core.js"></script>
+<script type="text/javascript" src="./Add news _ Django site admin_files/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="./Add news _ Django site admin_files/jquery.js"></script>
+<script type="text/javascript" src="./Add news _ Django site admin_files/jquery.init.js"></script>
+<script type="text/javascript" src="./Add news _ Django site admin_files/actions.js"></script>
+<script type="text/javascript" src="./Add news _ Django site admin_files/related-widget-wrapper.js"></script>
+
+<meta name="robots" content="NONE,NOARCHIVE">
+<style type="text/css"></style></head>
+
+
+<body class=" app-news model-news change-form"><div id="StayFocusd-infobar" style="display:none;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="http://localhost:8000/admin/">Django administration</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>goujonpa</strong>.
+            
+            
+                
+                    <a href="http://localhost:8000/">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="http://localhost:8000/admin/password_change/">Change password</a> /
+                
+                <a href="http://localhost:8000/admin/logout/">Log out</a>
+            
+        </div>
+        
+        
+        
+    </div>
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="http://localhost:8000/admin/">Home</a>
+› <a href="http://localhost:8000/admin/news/">News</a>
+› <a href="http://localhost:8000/admin/news/news/">Newss</a>
+› Add news
+</div>
+
+    
+
+    
+        
+    
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Add news</h1>
+        <div id="content-main">
+
+
+
+<form enctype="multipart/form-data" action="" method="post" id="news_form" novalidate=""><input type="hidden" name="csrfmiddlewaretoken" value="sm0SEbDwei9TM0Dz6NKy6rUTtRB8oNxi">
+<div>
+
+
+
+
+
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-titre">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_titre">Titre:</label>
+                        
+                            <input class="vTextField" id="id_titre" maxlength="255" name="titre" type="text">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-auteur">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_auteur">Auteur:</label>
+                        
+                            <input class="vTextField" id="id_auteur" maxlength="255" name="auteur" type="text">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-categorie">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_categorie">Categorie:</label>
+                        
+                            
+<div class="related-widget-wrapper">
+    <select id="id_categorie" name="categorie">
+<option value="" selected="selected">---------</option>
+<option value="1">Medailles</option>
+<option value="2">Primeurs</option>
+<option value="3">General</option>
+</select>
+    
+        
+        <a class="related-widget-wrapper-link change-related" id="change_id_categorie" data-href-template="/admin/news/categorie/__fk__/?_to_field=id&amp;_popup=1" title="Change selected categorie" href="http://localhost:8000/admin/news/categorie/1/?_to_field=id&_popup=1">
+            <img src="./Add news _ Django site admin_files/icon_changelink.gif" width="10" height="10" alt="Change">
+        </a>
+        
+        
+        <a class="related-widget-wrapper-link add-related" id="add_id_categorie" href="http://localhost:8000/admin/news/categorie/add/?_to_field=id&_popup=1" title="Add another categorie">
+            <img src="./Add news _ Django site admin_files/icon_addlink.gif" width="10" height="10" alt="Add">
+        </a>
+        
+        
+    
+</div>
+
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-texte">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_texte">Texte:</label>
+                        
+                            <textarea class="vLargeTextField" cols="40" id="id_texte" name="texte" rows="10"></textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+<input type="submit" value="Save" class="default" name="_save">
+
+
+<input type="submit" value="Save and add another" name="_addanother">
+<input type="submit" value="Save and continue editing" name="_continue">
+</div>
+
+
+
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                $('.add-another').click(function(e) {
+                    e.preventDefault();
+                    showAddAnotherPopup(this);
+                });
+                $('.related-lookup').click(function(e) {
+                    e.preventDefault();
+                    showRelatedObjectLookupPopup(this);
+                });
+            
+                $('form#news_form :input:visible:enabled:first').focus()
+            
+            });
+        })(django.jQuery);
+    </script>
+
+
+
+
+<script type="text/javascript">
+(function($) {
+    var field;
+
+
+})(django.jQuery);
+</script>
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+
+
+</body></html>

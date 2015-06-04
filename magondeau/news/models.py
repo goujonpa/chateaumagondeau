@@ -8,7 +8,7 @@ class News(models.Model):
     categorie = models.ForeignKey('Categorie')
     texte = models.TextField()
 
-    def __str__(self):
+    def __unicode__(self):
         return self.titre
 
 
@@ -16,5 +16,5 @@ class Categorie(models.Model):
     titre = models.CharField(max_length=255)
     description = models.TextField()
 
-    def __str__(self):
+    def __unicode__(self):
         return self.titre
