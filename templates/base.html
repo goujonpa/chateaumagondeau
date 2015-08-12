@@ -1,0 +1,272 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="fr" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="fr" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="fr"> <!--<![endif]-->
+
+<head>
+
+    <title>{% block title %}Accueil | Chateau Magondeau{% endblock %}</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chateau Magondeau - Winery website">
+    <meta name="author" content="Paul GOUJON">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href='{% static 'favicon.ico' %}'>
+
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href='{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}'>
+    <link rel="stylesheet" href='{% static 'assets/css/style.css' %}'>
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href='{% static 'assets/css/headers/header-default.css' %}'>
+    <link rel="stylesheet" href='{% static 'assets/css/footers/footer-v1.css' %}'>
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href='{% static 'assets/plugins/animate.css' %}'>
+    <link rel="stylesheet" href='{% static 'assets/plugins/line-icons/line-icons.css' %}'>
+    <link rel="stylesheet" href='{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}'>
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href='{% static 'assets/css/theme-colors/dark-red.css' %}' id="style_color">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href='{% static 'assets/css/custom.css' %}'>
+    {% block stylesheets %}{% endblock %}
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!--=== Header ===-->
+    <div class="header">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="logo" href='{% url 'home.views.home' %}'>
+                <img src='{% static 'assets/img/logo1-dark-red.png' %}' alt="Logo">
+            </a>
+            <!-- End Logo -->
+
+            <!-- Topbar -->
+            <div class="topbar">
+                <ul class="loginbar pull-right">
+                    <li class="hoverSelector">
+                        <i class="fa fa-globe"></i>
+                        <a>Langages</a>
+                        <ul class="languages hoverSelectorBlock">
+                            <li class="active">
+                                <a href="#">Français<i class="fa fa-check"></i></a>
+                            </li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </li>
+                    <li class="topbar-devider"></li>
+                    <li><a href="page_faq.html">Aide</a></li>
+                    <li class="topbar-devider"></li>
+                    <li><a href="page_login.html">Login</a></li>
+                </ul>
+            </div>
+            <!-- End Topbar -->
+
+            <!-- Toggle get grouped for better mobile display -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- End Toggle -->
+
+        </div><!--/end container-->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+
+                    <!-- Home -->
+                    <li class="active">
+                        <a href="">
+                            Accueil
+                        </a>
+                    </li>
+                    <!-- End Home -->
+
+                    <!-- Home -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            Actualités
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href=''>Fil d'actualités</a></li>
+                            <li><a href=''>Presse</a></li>
+                            <li><a href=''>Récompenses</a></li>
+                            <li><a href=''>Salons</a></li>
+                        </ul>
+                    </li>
+                    <!-- End Home -->
+
+                    <!-- Pages -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            Nos Vins
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="page_invoice.html">Tous les vins</a></li>
+                            <li><a href="page_invoice.html">Passion</a></li>
+                            <li><a href="page_invoice.html">Beau Site</a></li>
+                            <li><a href="page_invoice.html">Magondeau</a></li>
+                            <li><a href="page_invoice.html">Bordeaux Blanc</a></li>
+                            <li><a href="page_invoice.html">Bordeaux Rosé</a></li>
+                        </ul>
+                    </li>
+                    <!-- End Pages -->
+
+                    <!-- Blog -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            Le Domaine
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog_masonry_3col.html">Terroir</a></li>
+                            <li><a href="blog_masonry_3col.html">Chateau</a></li>
+                            <li><a href="blog_masonry_3col.html">Vinification</a></li>
+                        </ul>
+                    </li>
+                    <!-- End Blog -->
+
+                    <!-- Portfolio -->
+                    <li>
+                        <a href="j">
+                            Nous Contacter
+                        </a>
+                    </li>
+                    <!-- End Portfolio -->
+
+
+                    <!-- Search Block -->
+                    <li>
+                        <i class="search fa fa-search search-btn"></i>
+                        <div class="search-open">
+                            <div class="input-group animated fadeInDown">
+                                <input type="text" class="form-control" placeholder="Rechercher">
+                                <span class="input-group-btn">
+                                    <button class="btn-u" type="button">Go</button>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Search Block -->
+                </ul>
+            </div><!--/end container-->
+        </div><!--/navbar-collapse-->
+    </div>
+    <!--=== End Header ===-->
+
+    {% block slider %}{% endblock %}
+
+    {% block breadcrumbs %}{% endblock %}
+
+    {% block content %}{% endblock %}
+
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            Paul GOUJON 2015 &copy; All Rights Reserved.
+                           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="col-md-6">
+                        <ul class="footer-socials list-inline">
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                                    <i class="fa fa-skype"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
+                                    <i class="fa fa-pinterest"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
+                                    <i class="fa fa-dribbble"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Social Links -->
+                </div>
+            </div>
+        </div><!--/copyright-->
+    </div>
+    <!--=== End Footer Version 1 ===-->
+
+</div><!--/wrapper-->
+
+<script type="text/javascript">var STATIC_URL={% static '' %};</script>
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src='{% static 'assets/plugins/jquery/jquery.min.js' %}'></script>
+<script type="text/javascript" src='{% static 'assets/plugins/jquery/jquery-migrate.min.js' %}'></script>
+<script type="text/javascript" src='{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}'></script>
+
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src='{% static 'assets/plugins/back-to-top.js' %}'></script>
+<script type="text/javascript" src='{% static 'assets/plugins/smoothScroll.js' %}'></script>
+<!-- JS Customization -->
+<script type="text/javascript" src='{% static 'assets/js/custom.js' %}'></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src='{% static 'assets/js/app.js' %}'></script>
+{% block scripts %}{% endblock %}
+
+{% block jquery %}
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        });
+</script>
+{% endblock %}
+
+<!--[if lt IE 9]>
+    <script src='{% static 'assets/plugins/respond.js' %}'></script>
+    <script src='{% static 'assets/plugins/html5shiv.js' %}'></script>
+    <script src='{% static 'assets/plugins/placeholder-IE-fixes.js' %}'></script>
+<![endif]-->
+
+</body>
+</html>
