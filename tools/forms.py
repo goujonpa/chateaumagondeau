@@ -31,3 +31,5 @@ class LoginForm(AuthenticationForm):
                                         'type': 'password',
                                     }
         )
+
+
