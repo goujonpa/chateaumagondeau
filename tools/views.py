@@ -1,8 +1,9 @@
 from django import forms
 from django.shortcuts import render
 from django.contrib.auth.decorators import user_passes_test
-from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
+
+from forms import LoginForm
 
 
 def staff_check(user):
@@ -14,7 +15,7 @@ def tools_login(request):
     """The login/logout view"""
     context = dict()
     if request.method == 'POST':
-        login_form = AuthenticationForm(data=request.POST)
+        login_form = LoginForm(data=request.POST)
         if login_form.is_valid():
             print('valid')
             print(type(login_form.get_user))
@@ -24,7 +25,7 @@ def tools_login(request):
         else:
             print('not valid')
     else:
-        login_form = AuthenticationForm()
+        login_form = LoginForm()
     context.update({'login_form': login_form})
     return render(request, 'login/tools_login.html', context)
 
