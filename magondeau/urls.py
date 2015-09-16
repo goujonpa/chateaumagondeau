@@ -27,6 +27,9 @@ from home import urls as home_urls
 from tools import urls as tools_urls
 
 # News imports
+from news import urls as news_urls
+
+# News imports
 from news.serializers import NewSerializer
 from news.viewsets import NewViewSet
 
@@ -38,6 +41,7 @@ router.register(r'new', NewViewSet)
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^tools/', include(tools_urls)),
+    url(r'^news/', include(news_urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^$', include(home_urls)),
 ]
