@@ -1,68 +1,61 @@
 # Django imports
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.views.decorators.csrf import csrf_exempt
 
 # Import REST
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 # Import News
 from news.models import New
 from news.serializers import NewSerializer
 
 
-class JSONResponse(HttpResponse):
+class NewsList(APIView):
     """
-    An HttpResponse that renders its content into JSON.
+    Provides a list the news
     """
-    def __init__(self, data, **kwargs):
-        content = JSONRenderer().render(data)
-        kwargs['content_type'] = 'application/json'
-        super(JSONResponse, self).__init__(content, **kwargs)
 
-
-@csrf_exempt
-def news_list(request):
-    """
-    List all news, or create a new one.
-    """
-    if request.method == 'GET':
+    def get(self, request, format=None):
         news = New.objects.all()
         serializer = NewSerializer(news, many=True)
-        return JSONResponse(serializer.data)
+        return Response(serializer.data)
 
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = NewSerializer(data=data)
+    def post(self, request, format=None):
+        serializer = NewSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return JSONResponse(serializer.data, status=201)
-        return JSONResponse(serializer.errors, status=400)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@csrf_exempt
-def news_detail(request, pk):
+class NewsDetail(APIView):
     """
-    Retrieve, update or delete a code snippet.
+    Retrieve, update or delete a news.
     """
-    try:
-        news = New.objects.get(pk=pk)
-    except New.DoesNotExist:
-        return HttpResponse(status=404)
 
-    if request.method == 'GET':
-        serializer = NewSerialiser(news)
-        return JSONResponse(serializer.data)
+    def get_object(self, pk):
+        try:
+            return New.objects.get(pk=pk)
+        except New.DoesNotExist:
+            raise Http404
 
-    elif request.method == 'PUT':
-        data = JSONParser().parse(request)
-        serializer = NewSerialiser(news, data=data)
+    def get(self, request, pk, format=None):
+        New = get_object(pk)
+        serializer = NewSerializer(new)
+        return Response(serializer.data)
+
+    def put(self, request, pk, format=None):
+        New = get_object(pk)
+        serializer = NewSerializer(new, data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return JSONResponse(serializer.data)
-        return JSONResponse(serializer.errors, status=400)
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    elif request.method == 'DELETE':
-        news.delete()
-        return HttpResponse(status=204)
+    def delete(self, request, pk, format=None):
+        New = get_object(pk)
+        new.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
