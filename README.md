@@ -1,2 +1,3 @@
 # chateaumagondeau
-Django personal project : Website of a winery
+
+/!\ Work in progress...
